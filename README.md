@@ -1,1 +1,1 @@
-# -LangGraph-based-SQL-_agent
+# LangGraph-based-SQL-_agent
