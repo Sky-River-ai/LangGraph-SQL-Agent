@@ -107,3 +107,32 @@ if user_query:
 st.sidebar.subheader("Available Tables")
 for table in db.get_usable_table_names():
     st.sidebar.write(table)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
