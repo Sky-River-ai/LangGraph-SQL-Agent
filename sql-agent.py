@@ -8,7 +8,7 @@ from langchain_community.llms import Ollama
 import pymysql
 
 # Initialize Ollama
-llm = Ollama(model="llama3.2:3b-instruct-fp16")  # or whichever model you're using with Ollama
+llm = Ollama(model="llama3.2:3b-instruct-fp16")  
 
 # MySQL connection details
 mysql_config = {
@@ -17,7 +17,7 @@ mysql_config = {
     "database":"customer_behavior",
     "username":"root",
     "password":"abc**",
-    "table":"customer", # Default MySQL port, change if yours is different
+    "table":"customer", 
 }
 
 # Initialize your MySQL database
