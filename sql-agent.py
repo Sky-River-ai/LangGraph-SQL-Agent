@@ -88,7 +88,7 @@ st.title("MySQL Query Assistant (Ollama)")
 user_query = st.text_input("Enter your question about the MySQL database:")
 
 if user_query:
-    # Process the query through your LangGraph
+    # Process the query through LangGraph
     result = app.invoke({"query": user_query})
     
     # Display the results
