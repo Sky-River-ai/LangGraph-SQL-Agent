@@ -14,7 +14,7 @@ mysql_config = {
     "port":3306,
     "database":"customer_behavior",
     "username":"root",
-    "password":"Grelb5MPamz113wfuv",
+    "password":"abc",
     "table":"customer", 
 }
 
