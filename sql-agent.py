@@ -1,14 +1,12 @@
 import streamlit as st
-from langchain.schema import StrOutputParser
-from langchain.schema.runnable import RunnablePassthrough
 from langchain_community.utilities import SQLDatabase
+from langchain_community.llms import Ollama
 from langgraph.graph import StateGraph, END
 from typing import TypedDict, Annotated, Sequence
-from langchain_community.llms import Ollama
 import pymysql
 
 # Initialize Ollama
-llm = Ollama(model="llama3.2:3b-instruct-fp16")  
+llm = Ollama(model="llama3.2:3b-instruct-fp16") 
 
 # MySQL connection details
 mysql_config = {
@@ -16,11 +14,11 @@ mysql_config = {
     "port":3306,
     "database":"customer_behavior",
     "username":"root",
-    "password":"abc**",
+    "password":"Grelb5MPamz113wfuv",
     "table":"customer", 
 }
 
-# Initialize your MySQL database
+# Initialize  MySQL database
 db = SQLDatabase.from_uri(f"mysql+pymysql://{mysql_config['username']}:{mysql_config['password']}@{mysql_config['host']}:{mysql_config['port']}/{mysql_config['database']}")
 
 # Define the state
@@ -39,7 +37,7 @@ Query: {state['query']}
 The available tables in the database are: {db.get_table_names()}
 
 MySQL Query:"""
-    sql = llm.invoke(prompt)
+    sql = llm.predict(prompt)
     return {"sql": sql, "thought": "Generated MySQL query based on user input."}
 
 def execute_sql(state: State) -> State:
@@ -105,34 +103,5 @@ if user_query:
 
 # Add a section to display available tables
 st.sidebar.subheader("Available Tables")
-for table in db.get_usable_table_names():
+for table in db.get_table_names():
     st.sidebar.write(table)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
