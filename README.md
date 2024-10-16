@@ -26,6 +26,6 @@ If it goes to "interpret_result", it then proceeds to the "End" node.
 This graph structure allows for flexibility in handling different scenarios:
 
 It can generate and execute a SQL query, then interpret the results all in one pass.
-It can also handle cases where multiple SQL queries might be needed (e.g., if the first query doesn't fully answer the user's question).
+It can also handle cases where multiple SQL queries might be needed (e.g if the first query doesn't fully answer the user's question).
 
 The "should_continue" node acts as a control flow mechanism, ensuring that the graph can adapt to different query types and results. This makes our SQL agent more robust and capable of handling a variety of user queries.
