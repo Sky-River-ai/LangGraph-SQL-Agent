@@ -1,6 +1,6 @@
 Developed a Text to SQL LangGraph Agent which outputs a Generated SQL Query and Query Result as shown in result.png File, and Query result is interpreted in Natural Language.
 
-the architecture of our LangGraph-based SQL agent. Here's a breakdown of the components:
+The architecture of our LangGraph-based SQL agent. Here's a breakdown of the components:
 
 Start: The entry point of our graph.
 generate_sql: This node takes the user's natural language query and generates a SQL query.
